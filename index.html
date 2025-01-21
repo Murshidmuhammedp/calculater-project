@@ -11,6 +11,15 @@
 <body>
     <div class="container">
         <div class="calculator">
+
+            <div id="history-sidebar" class="history-sidebar">
+                <div class="history-header">
+                    History
+                    <button onclick="toggleHistory()">Close</button>
+                </div>
+                <ul id="history-list"></ul>
+            </div>
+
             <div class="buttons">
                 <div class="display">
                     <input type="text" id="display" name="display" readonly>
@@ -47,11 +56,6 @@
                     <input type="button" value="00" onclick="appendToDisplay('00')">
                     <input type="button" value="=" class="equal" onclick="calculateResult()">
                 </div>
-            </div>
-
-            <div id="history-section" class="history" style="display: none;">
-               History
-                <ul id="history-list"></ul>
             </div>
         </div>
     </div>

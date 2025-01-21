@@ -1,9 +1,9 @@
 const display = document.getElementById('display');
-const historySection = document.getElementById('history-section');
+const historySidebar = document.getElementById('history-sidebar');
 const historyList = document.getElementById('history-list');
 
 function clearDisplay() {
-    display.value = "0";
+    display.value = " ";
 }
 
 function deleteLastChar() {
@@ -17,7 +17,7 @@ function appendToDisplay(value) {
 function calculateResult() {
     try {
         if (display.value.includes('/0')) {
-            alert("Error: Division by zero is not allowed.");
+            alert("Division by zero is not allowed.");
             return;
         }
         const result = eval(display.value);
@@ -35,10 +35,10 @@ function addToHistory(calculation, result) {
 }
 
 function toggleHistory() {
-    if (historySection.style.display === "none" || historySection.style.display === "") {
-        historySection.style.display = "block";
+    if (historySidebar.style.display === "none" || historySidebar.style.display === "") {
+        historySidebar.style.display = "block";
     } else {
-        historySection.style.display = "none";
+        historySidebar.style.display = "none";
     }
 }
 
